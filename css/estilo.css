@@ -1,0 +1,395 @@
+
+/* Códigos Gerais */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan:ital@0;1&display=swap');
+
+
+
+*{ 
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    color: #F5F5F5;
+}
+
+body{
+    background-image: radial-gradient(circle,#800000, #530101  );
+}
+
+#offset{
+    display:none;
+}
+
+.container{ 
+    
+    display: grid;
+    grid-template-areas: 
+    "aside main main main main";
+    padding-top:75px;
+    padding-bottom:75px;
+    gap: 0px 50px;
+}
+
+aside{
+    grid-area: aside; 
+    justify-self: end;
+    text-align: left;
+    
+    border: 0px solid white;
+    border-left-width: 1px;
+    padding-left: 20px;
+    
+}
+
+aside p{
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+aside a{ 
+    color: #F5F5F5;
+    
+    text-decoration: none;
+}
+
+aside h1{
+    margin-bottom: 50px;
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+aside h1 a:hover{ 
+    color: #F5F5F5;
+}
+
+aside a:hover{
+    color: rgb(39, 0, 0);
+
+}
+
+#copyright{
+    font-size:0.9rem;
+}
+
+#redes{
+    font-size:1.1rem;
+    margin-bottom:5px;
+    margin-top: 50px;
+}
+
+
+main#inicio{ 
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: start;
+    margin: 0px;
+}
+
+@media (min-width: 1000px){
+    main#inicio{ 
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        justify-self: start;
+    
+    }
+    
+
+}
+
+/* Códigos referentes a pagina Index */
+
+
+.EmCima{ 
+    visibility: hidden;
+}
+
+.vCel{ 
+    display: none;
+}
+
+@media (min-width: 1500px){
+
+    .card:hover .EmCima{ 
+        visibility: visible;
+        background-color: rgba(0,0,0,.8);
+        transition: 0.5s;
+    }
+}
+
+figure{ 
+    margin: 0px 20px 20px 20px;
+    text-align: center;
+}
+
+figcaption{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+figure img{ 
+   width: 15vw;     
+   border-radius: 10px; 
+}
+
+figure .card{ 
+    width: 15vw;     
+     
+ }
+
+/* Códigos página Sobre*/
+
+article#sobre{
+    display: grid;
+    grid-template-areas: "imagem biografia biografia biografia biografia";
+    margin: 50px; 
+}
+
+article#sobre img{
+    border-radius: 360px;
+    width: 15vw;
+    grid-area: imagem;
+}
+
+article#sobre  #biografia{ 
+    padding: 0px 20px;
+    font-size: 1rem; 
+    text-align: justify;
+    align-self: center;
+    grid-area: biografia;
+}
+
+article#tabela{ 
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    row-gap: 20px;
+    
+}
+
+article#tabela div#instagram{
+    
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-image: url("../img/instagram.png");
+    border-radius: 360px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+div#instagram:hover{
+    transform: rotate(20deg);
+}
+
+article#tabela div#facebook{
+    display: inline-block;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-image: url("../img/facebook.png");    
+    transition: 0.5s;
+
+}
+
+div#facebook:hover{
+    transform: rotate(-20deg);
+}
+
+
+/*Códigos referente a contato*/
+
+div#slider{
+    width: 20vw;
+    background-color: #1e1e1e;
+    height:30vh;
+    padding: 10px;
+    background-position: center;
+    background-size: 20vw;
+    background-repeat: no-repeat;
+}
+
+#btnEsquerda{ 
+    float: left;
+    margin-top: 11vh;
+    font-size: 2em;
+    color: rgba(255,255,255,.3);
+    cursor: pointer;
+}
+
+#btnDireita{ 
+    float: right;
+    margin-top: 11vh;
+    font-size: 2em;
+    color: rgba(255,255,255,.3);
+    cursor: pointer;
+}
+
+
+#btnEsquerda:hover{
+    color: rgba(255,255,255,1);
+}
+
+#btnDireita:hover{
+    color: rgba(255,255,255,1);
+}
+
+
+
+/* Códigos Versão Mobile Sobre */
+
+@media (max-width: 1200px){
+    article#sobre{
+        display: grid;
+        grid-template-areas: 
+        "imagem"
+        "biografia";
+        justify-items: center;
+    }
+
+    article#sobre  #biografia{ 
+        padding: 20px 0px;
+    }
+
+    article#sobre img{
+        width: 45vw;
+    }
+
+    article#tabela{ 
+        display: grid;
+        grid-template-columns: 1fr ;
+        row-gap: 20px;
+        
+    }
+
+    article#tabela div#instagram{
+        margin-right: 20px;;
+    }
+
+
+}
+
+/* Códigos Versão Mobile */
+
+
+@media (max-width: 900px){
+
+    .container{
+
+        grid-template-areas: 
+        "aside"
+        "main";
+        padding: 20px;
+        gap: 0px 125px;
+    }
+
+    #offset{
+        display: block;
+        position: absolute;
+        left: 75vw;
+        top: 5%;
+    }
+
+    #offset button{
+        background-color: rgba(0,0,0,.2);
+        border: none;
+        padding: 10px 10px;
+        padding-bottom: 0px;
+    }
+
+    #offset span{
+        font-size: 2.5rem;
+    }
+
+    #offset .offcanvas{
+        background-color: #333333;
+        height: 80vh;
+    }
+
+    #offset .btn-close{
+        padding: 10px;
+        background-color: white;
+    }
+
+    #offset #redes{
+        margin-top: 60px;
+        font-size: 1rem;
+    }
+
+    #offset #redes:hover{
+        background-color: #1e1e1e;
+    }
+
+    #offset .offcanvas-body{
+        align-self: center;
+        text-align: center;
+        background-color: #1e1e1e;
+        box-shadow: 0px 10px 10px rgba(0,0,0,.3);
+    }
+
+    #offset .offcanvas-body p{
+        background-color: #1e1e1e;
+        width: 100vw;
+        font-size: 2rem;
+        margin: 0px;
+        padding: 10px;
+    }
+
+    #offset .offcanvas-body p:hover{
+        background-color: #333333;
+    }
+
+    menu{
+        display: none;
+    }
+
+    aside{
+        padding-right: 10px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        justify-self: start;
+    }
+
+    aside h1{ 
+        margin-bottom: 10px;
+    }
+
+    #redes{ 
+        margin: 0px;
+    }
+
+    /* Códigos Versão Mobile index */
+    
+    .vCel{ 
+        display: block;
+    }
+
+    .vPc{ 
+        display: none;
+    }
+ 
+    figure img{
+
+        width: 40vw;
+
+    }
+
+    main#inicio{
+        grid-template-columns: 1fr 1fr; 
+        gap: 0px;
+    }
+
+  
+}
