@@ -210,19 +210,33 @@ div#facebook:hover{
 
 /*Códigos referente a contato*/
 
+div#textoSlider{
+    margin-top: 10px;
+    width: 40vw;
+    width: 30vw;
+}
+
+div#textoSlider p{
+    text-align: justify;
+    
+}
+
+
+
 div#slider{
-    width: 20vw;
-    background-color: #1e1e1e;
-    height:30vh;
+    margin-top: 30px;
+    width: 30vw;
+    background-image: url(/img/peny-trabalhando01.jpg);
+    height:40vh;
     padding: 10px;
     background-position: center;
-    background-size: 20vw;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 #btnEsquerda{ 
     float: left;
-    margin-top: 11vh;
+    margin-top: 15vh;
     font-size: 2em;
     color: rgba(255,255,255,.3);
     cursor: pointer;
@@ -230,7 +244,7 @@ div#slider{
 
 #btnDireita{ 
     float: right;
-    margin-top: 11vh;
+    margin-top: 15vh;
     font-size: 2em;
     color: rgba(255,255,255,.3);
     cursor: pointer;
@@ -246,8 +260,36 @@ div#slider{
 }
 
 
+/* Códigos Versão Mobile CONTATO */
 
-/* Códigos Versão Mobile Sobre */
+
+@media(max-width: 1000px){
+    div#slider{
+        width: 60vw;    
+    }    
+
+    div#textoSlider{
+        width: 60vw;   
+    }
+
+}
+
+@media(max-width: 600px){
+    div#slider{
+        width: 90vw;    
+    }    
+
+    div#textoSlider{
+        width: 90vw;   
+        padding:10px;
+    }
+
+
+
+}
+
+
+/* Códigos Versão Mobile SOBRE */
 
 @media (max-width: 1200px){
     article#sobre{
