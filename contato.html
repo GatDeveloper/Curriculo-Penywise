@@ -51,7 +51,7 @@
                     </div>
             </menu>
 
-            <h1><a href="#"> Pennywise <br> A coisa </a></h1>
+            <h1><a href="index.html"> Pennywise <br> A coisa </a></h1>
 
             <menu>
                 <p><a href="index.html"> Inicio </a> </p>
@@ -120,6 +120,43 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <div id="balaoSubir">
+      <a href="#"> <img src="/img/balao.gif" width="100px" /></a>
+     </div>
+     
+     <script> 
+ 
+       function userReachedBottom() {
+         const scrollPosition = window.scrollY + window.innerHeight;
+         const documentHeight = document.documentElement.offsetHeight;
+         return scrollPosition >= documentHeight;
+       }
+ 
+       function inversouserReachedBottom() {
+         const scrollPosition = window.scrollY + window.innerHeight;
+         const documentHeight = document.documentElement.offsetHeight;
+         return scrollPosition < documentHeight;
+       }
+ 
+       window.addEventListener('scroll', () => {
+           if (userReachedBottom()) {
+             
+             const balao = document.getElementById('balaoSubir');
+             balao.style.left = '80vw';
+           
+           }
+        });
+ 
+        window.addEventListener('scroll', () => {
+           if (inversouserReachedBottom()) {
+             
+             const balao = document.getElementById('balaoSubir');
+             balao.style.left = '100vw';
+           
+           }
+        });
+     </script>
+     
     
 
     <script> 

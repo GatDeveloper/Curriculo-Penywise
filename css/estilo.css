@@ -89,15 +89,15 @@ main#inicio{
     grid-template-columns: 1fr 1fr;
     justify-self: start;
     margin: 0px;
+    padding: 0px;
 }
 
 @media (min-width: 1000px){
     main#inicio{ 
         grid-area: main;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
 
-        justify-self: start;
     
     }
     
@@ -147,7 +147,14 @@ figure .card{
      
  }
 
-/* Códigos página Sobre*/
+/* Códigos página OBJETIVO*/
+
+main#objetivo #tabela{
+    margin-top: 40px;
+}
+
+
+/* Códigos página SOBRE*/
 
 article#sobre{
     display: grid;
@@ -424,7 +431,7 @@ div#slider{
  
     figure img{
 
-        width: 40vw;
+        width: 35vw;
 
     }
 
@@ -434,4 +441,13 @@ div#slider{
     }
 
   
+}
+
+/*balão */
+
+#balaoSubir{
+    transition: 2s;
+    position: fixed;
+    top: 60vh;
+    left: 100vw;
 }

@@ -51,7 +51,7 @@
                     </div>
             </menu>
 
-            <h1><a href="#"> Pennywise <br> A coisa </a></h1>
+            <h1><a href="index.html"> Pennywise <br> A coisa </a></h1>
 
             <menu>
                 <p><a href="index.html"> Inicio </a> </p>
@@ -76,51 +76,53 @@
 
         <main id="inicio"> 
 
-            <figure class="vPc"> 
+            <figure class="vPc"> <a href="trabalho.html#george">
                 <div class="card text-bg-dark">
                     <img src="img/george.png" class="card-img" alt="imagem sobre Georgie Denbrough ">
                     <div class="card-img-overlay EmCima">
                       <h5 class="card-title">Georgie Denbrough</h5>
                       <p class="card-text">lembra-te sempre, Georgie, lembra-te de Pennywise, o Palhaço Dançarino. Estou sempre por perto, esperando... por ti.</p>
                     </div>
-                  </div>
+                  </div></a>
                   <figcaption> Flutuador A </figcaption>
             </figure>
 
             <figure class="vCel"> 
-                    <img src="img/george.png" alt="imagem sobre Georgie Denbrough ">
+              <a href="trabalho.html#george"> <img src="img/george.png" alt="imagem sobre Georgie Denbrough "></a>
                     <figcaption> Flutuador A </figcaption>
             </figure>
 
             <figure class="vPc"> 
-                <div class="card text-bg-dark">
+              <a href="trabalho.html#patrick"><div class="card text-bg-dark">
                     <img src="img/Patrick.png" class="card-img" alt="imagem sobre Patrick Hockstetter ">
                     <div class="card-img-overlay EmCima">
                       <h5 class="card-title">Patrick Hockstetter </h5>
                       <p class="card-text">Ah, Patrick, quanto mais te ocultas nas sombras, mais te tornas... deliciosamente interessante.</p>
                     </div>
-                  </div>
+                  </div></a>
                   <figcaption> Flutuador B </figcaption>
             </figure>
 
             <figure class="vCel"> 
-                    <img src="img/Patrick.png" alt="imagem sobre Patrick Hockstetter">
+              <a href="trabalho.html#patrick"> <img src="img/Patrick.png" alt="imagem sobre Patrick Hockstetter"></a>
                     <figcaption> Flutuador B </figcaption>
             </figure>
 
             <figure class="vPc"> 
-                <div class="card text-bg-dark">
+               <a href="trabalho.html#betty"> <div class="card text-bg-dark">
                     <img src="img/Betty.png" class="card-img" alt="imagem sobre Betty Ripsom ">
                     <div class="card-img-overlay EmCima">
                       <h5 class="card-title">Betty Ripsom</h5>
                       <p class="card-text">Ah, não temas, doce Betty, pois estou aqui para te guiar, para te proteger dos horrores que espreitam nas sombras.</p>
                     </div>
                   </div>
-                  <figcaption> Flutuador C </figcaption>
+                </a>
+                  <figcaption> Flutuador C </figcaption> 
+               
             </figure>
 
             <figure class="vCel"> 
-                    <img src="img/Betty.png" alt="imagem sobre Betty Ripsom ">
+              <a href="trabalho.html#betty">   <img src="img/Betty.png" alt="imagem sobre Betty Ripsom "> </a>
                     <figcaption> Flutuador C </figcaption>
             </figure>
 
@@ -177,8 +179,44 @@
         </main>
         
     </div>
-    
 
+    <div id="balaoSubir">
+     <a href="#"> <img src="/img/balao.gif" width="100px" /></a>
+    </div>
+    
+    <script> 
+
+      function userReachedBottom() {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.offsetHeight;
+        return scrollPosition >= documentHeight;
+      }
+
+      function inversouserReachedBottom() {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.offsetHeight;
+        return scrollPosition < documentHeight;
+      }
+
+      window.addEventListener('scroll', () => {
+          if (userReachedBottom()) {
+            
+            const balao = document.getElementById('balaoSubir');
+            balao.style.left = '80vw';
+          
+          }
+       });
+
+       window.addEventListener('scroll', () => {
+          if (inversouserReachedBottom()) {
+            
+            const balao = document.getElementById('balaoSubir');
+            balao.style.left = '100vw';
+          
+          }
+       });
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
